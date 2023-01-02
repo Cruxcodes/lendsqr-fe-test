@@ -1,0 +1,28 @@
+$accent-color: #39CDCC;
+$border-color: #545F7D26;
+$header-color: #213F7D;
+$text-color: #545F7D;
+
+$media-large: "only screen and (max-width : 1220px)";
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 600px)";
+$media-mobile-sm: "only screen and (max-width : 480px)";
+
+$font-sizes:(
+    "regular" : 400,
+    "medium": 500,
+    "bold": 600,
+    "bolder": 700,
+);
+
+@function fontSize($font-size){
+    @return map-get($font-sizes, $font-size);
+}
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
