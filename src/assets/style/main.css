@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -194,6 +197,43 @@
 }
 .login-page__right form input[type=submit]:hover {
   cursor: pointer;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.nav-heading {
+  color: #545F7D;
+  font-weight: 600;
+  text-align: start;
+  padding: 10px 20px;
+  margin-left: 10px;
+}
+
+.nav-item {
+  background: rgba(57, 205, 205, 0.6);
+  display: flex;
+  font-size: 400;
+  padding: 10px 20px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  color: #213F7D;
+  width: 100%;
+  filter: grayscale(50%);
+  border-left: 3px solid #39CDCC;
+}
+.nav-item:hover {
+  filter: none;
+}
+.nav-item_img {
+  margin: 0px 10px;
+  width: 20px;
+}
+.nav-item_info {
+  margin: 0px 10px;
 }
 
 * {
