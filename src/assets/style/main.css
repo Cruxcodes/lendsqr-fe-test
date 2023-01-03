@@ -67,6 +67,11 @@
     height: 10%;
   }
 }
+@media only screen and (max-width : 480px) {
+  .login-page__left {
+    background-position-x: 30px;
+  }
+}
 .login-page__left img {
   width: 100%;
 }
