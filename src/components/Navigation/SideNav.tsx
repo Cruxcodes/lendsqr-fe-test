@@ -1,6 +1,5 @@
 import React from 'react'
 import NavItem from './NavItem'
-import image from '../../assets/icons/user-friends 1.svg'
 import { Customers,Business,Settings} from '../../shared/Navdata'
 import { v4 as uuidv4 } from 'uuid';
 const SideNav = () => {
