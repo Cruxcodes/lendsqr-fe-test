@@ -1,0 +1,58 @@
+@import '../../Presets';
+
+
+.userTable{
+    padding: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(33, 63, 125, 0.06);
+    box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+}
+.headings{
+    padding: 15px 0px;
+    display: grid;
+    grid-template-columns: 15% 15% 20% 15% 15% 15% 5%;
+    .header{
+        display: flex;
+        text-transform: uppercase;
+         font-weight: fontWeight(bold);
+         color: $text-color;
+         font-size: fontSize(extra-small);
+        p{
+            margin-right:  10px;
+        }
+        img{
+            
+        }
+
+        @media  #{$media-desktop}{
+
+        }
+
+        .blacklisted{
+            color: red;
+        }
+        .active{
+            color: green;
+        }
+        .pending{
+            color: yellow;
+        }
+        .inactive{
+            border: none;
+            color: $text-color;
+            background: rgba(84, 95, 125, 0.06);
+            padding: 3px 10px;
+            border-radius: 100px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.user{
+    border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+}
+
+.active{
+    color: red;
+}

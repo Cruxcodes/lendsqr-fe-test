@@ -7,12 +7,12 @@ interface Props{
 }
 const NavItem:React.FC<Props>= ({icon,Link,iconInfo}) => {
   return (
-    // <NavLink to={Link}>
+    <NavLink to={Link} className='nav-link'>
     <div className='nav-item'>
         <img src={icon} alt="Icon" className="nav-item_img" />
         <p className="nav-item_info">{iconInfo}</p>
     </div>
-    // </NavLink>
+    </NavLink>
   )
 }
 

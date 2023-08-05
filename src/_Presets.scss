@@ -11,17 +11,28 @@ $media-tablet: "only screen and (max-width : 768px)";
 $media-mobile: "only screen and (max-width : 600px)";
 $media-mobile-sm: "only screen and (max-width : 480px)";
 
-$font-sizes:(
+$font-weights:(
     "regular" : 400,
     "medium": 500,
     "bold": 600,
     "bolder": 700,
 );
+$font-sizes:(
+    "extra-small":12px,
+    "small": 14px,
+    "regular" : 16px,
+    "medium": 18px,
+    "big" : 24px,
+    "large": 48px,
+);
 
-@function fontSize($font-size){
-    @return map-get($font-sizes, $font-size);
+@function fontWeight($font-weight){
+    @return map-get($font-weights, $font-weight);
 }
 
+@function fontSize($font-size) {
+    @return map-get($font-sizes, $font-size);
+}
 
 *{
     margin: 0px;

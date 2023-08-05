@@ -14,6 +14,7 @@ import Galaxy from '../assets/icons/galaxy 1.png';
 import ServiceAcc from '../assets/icons/user-cog 1.png';
 import Settlements from '../assets/icons/scroll 1.png';
 import Reports from  '../assets/icons/chart-bar 2.png';
+import More from '../assets/icons/showmore.png';
 import Preferences from '../assets/icons/sliders-h 1.png';
 import FeesAndP from '../assets/icons/badge-percent 1.png';
 import Clipboard from '../assets/icons/clipboard-list 1.png';
@@ -37,5 +38,6 @@ export{
     Reports,
     Preferences,
     FeesAndP,
+    More,
     Clipboard
 }
