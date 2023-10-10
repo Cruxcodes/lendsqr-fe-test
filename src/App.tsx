@@ -19,7 +19,7 @@ function DashboardLayout() {
     <>
       <div className="dashboard" style={{ display: "flex" }}>
         <SideNav />
-        <div className="container" style={{width: "100%",}}>
+        <div className="container" style={{width: "100%",display:"flex", justifyContent: "center",}}>
           <Outlet />
         </div>
       </div>
