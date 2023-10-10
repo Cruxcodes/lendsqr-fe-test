@@ -7,22 +7,44 @@ import UserItem from "./components/UserTable/UserItem";
 import UserTable from "./components/UserTable/UserTable";
 import CardSection from "./components/Cards/CardSection";
 import "./assets/style/main.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Outlet,
+} from "react-router-dom";
+
+function DashboardLayout() {
+  return (
+    <>
+      <SideNav />
+      <Topnav />
+      <Outlet />
+    </>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <Login/>
       <Router>
-        <SideNav />
-        <Topnav />
+        <Routes>
+          <Route index path="/login" element={<Login />} />
+          <Route  path="/*" element={<Login />} />
+
+          {/* <Route path="/dashboard">
+            <SideNav />
+            <Topnav />
+            <Route path="/table" element={<UserTable />} />
+          </Route> */}
+          <Route path="/dashboard/" element={<DashboardLayout />}>
+            <Route path="user" element={<UserTable />} />
+          </Route>
+        </Routes>
+
         {/* <CardSection/>
          */}
         {/* <UserItem/> */}
-        <UserTable />
-        <Routes>
-          <Route />
-        </Routes>
       </Router>
     </div>
   );

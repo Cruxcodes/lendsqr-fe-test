@@ -140,9 +140,6 @@
   flex-direction: column;
   text-align: start;
 }
-.login-page__right form ::-moz-placeholder {
-  color: #545F7D;
-}
 .login-page__right form ::placeholder {
   color: #545F7D;
 }
@@ -177,9 +174,7 @@
   font-size: 12px;
   cursor: pointer;
   color: #39CDCC;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   right: 16px;
 }
 .login-page__right form .password input[type=text] {
@@ -214,7 +209,7 @@
 .side-nav {
   width: 300px;
   overflow-y: visible;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
   height: 100%;
   padding-top: 100px;
@@ -248,9 +243,8 @@
 .side-nav .nav-link {
   text-decoration: none;
 }
-.side-nav .nav-link.active p {
-  color: red;
-  margin: 20px;
+.side-nav .nav-link.active .nav-item {
+  background: rgba(57, 205, 205, 0.6);
 }
 .side-nav .nav-link .nav-item {
   display: flex;
@@ -298,7 +292,6 @@
 }
 .top-nav_left form {
   width: 50%;
-  height: -moz-fit-content;
   height: fit-content;
   margin: auto 0px;
   display: flex;
@@ -328,19 +321,16 @@
   justify-content: end;
 }
 .top-nav_right * {
-  height: -moz-fit-content;
   height: fit-content;
   margin: auto 10px;
 }
 .top-nav_right img {
-  height: -moz-fit-content;
   height: fit-content;
 }
 .top-nav_right .user {
   display: flex;
 }
 .top-nav_right .user p {
-  height: -moz-fit-content;
   height: fit-content;
   margin: auto 0px;
 }

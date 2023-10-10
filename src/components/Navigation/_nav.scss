@@ -1,152 +1,148 @@
-@import '../../Presets';
+@import "../../Presets";
 
+.side-nav {
+  width: 300px;
+  overflow-y: visible;
+  background: #ffffff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  height: 100%;
+  padding-top: 100px;
+  @media #{$media-large} {
+    padding-top: 90px;
+  }
+  .nav-heading {
+    color: $text-color;
+    font-weight: fontSize(bold);
+    text-align: start;
+    padding: 10px 20px;
+    margin-left: 10px;
+  }
 
-.side-nav{
-    width: 300px;
-    overflow-y: visible;
-    background: #FFFFFF;
-    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
-    height: 100%;
-    padding-top: 100px;
-    @media  #{$media-large}{
-        padding-top: 90px;
+  .switch {
+    margin: 30px 0px;
+
+    select {
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background: none;
+      color: $header-color;
+      option {
+        font-family: $font-family;
+        color: $text-color;
+        font-weight: fontSize(regular);
+      }
     }
-    .nav-heading {
-            color: $text-color;
-            font-weight: fontSize(bold);
-            text-align: start;
-            padding: 10px 20px;
-            margin-left: 10px;
-        }
-    
+  }
+  .nav-link {
+    text-decoration: none;
 
-        
-    .switch{
-        margin: 30px 0px;
-
-        select{
-            border: none;
-            outline: none;
-            font-size: 16px;
-            background: none;
-                color: $header-color;
-            option{
-                font-family: $font-family;
-                color: $text-color;
-                font-weight: fontSize(regular);
-            }
-        }
+    &.active {
+      .nav-item {
+        background: rgba(57, 205, 205, 0.6);
+      }
     }
-    .nav-link{
-        text-decoration: none;
+    .nav-item {
+      display: flex;
+      font-size: fontSize(regular);
+      padding: 10px 20px;
+      font-family: $font-family;
+      font-weight: fontSize(regular);
+      color: $header-color;
+      margin: 10px auto;
+      width: 100%;
+      filter: grayscale(50%);
 
-        &.active p{
-            color: red;
-            margin: 20px;
-        }
-    
-        .nav-item {
-            display: flex;
-            font-size: fontSize(regular);
-            padding: 10px 20px;
-            font-family: $font-family;
-            font-weight: fontSize(regular);
-            color: $header-color;
-            margin: 10px auto;
-            width: 100%;
-            filter: grayscale(50%);
-    
-            &:hover {
-                filter: none;
-                background: rgba(57, 205, 205, 0.6);
-            border-left: 3px solid $accent-color;
-            }
-    
-            &_img {
-                margin: 0px 10px;
-                width: 20px;
-            }
-    
-            &_info {
-                margin: 0px 10px;
-    
-            }
-        }
+      &:hover {
+        filter: none;
+        background: rgba(57, 205, 205, 0.6);
+        border-left: 3px solid $accent-color;
+      }
+
+      &_img {
+        margin: 0px 10px;
+        width: 20px;
+      }
+
+      &_info {
+        margin: 0px 10px;
+      }
     }
+  }
 }
 
-@mixin flex{
-    width: 50%;
-    display: flex;
+@mixin flex {
+  width: 50%;
+  display: flex;
 }
 
-.top-nav{
-    z-index: 122;
-    background: #fff;
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    display: flex;
-    padding: 20px 30px;
-    box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+.top-nav {
+  z-index: 122;
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  padding: 20px 30px;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
 
-    &_left{
-        @include flex;
-        justify-content: space-between;
+  &_left {
+    @include flex;
+    justify-content: space-between;
 
-        .logo{
-            width: 150px;
-            height: 40px;
-            margin: auto 0px;
-        }
-
-        form{
-            width: 50%;
-            height: fit-content;
-            margin: auto 0px;
-            display: flex;
-            border: 1px solid $border-color;
-            border-radius: 10px;
-            overflow: hidden;
-            input{
-                padding: 15px 10px ;
-                border: none;
-                width: 80%;
-            }
-            div{
-                width: 20%;
-                background: $accent-color;
-                position: relative;
-
-                img{
-                    position: absolute;
-                    top:50%;
-                    left: 50%;
-                    transform: translate(-50%,-50%)
-                }
-            }
-        }
+    .logo {
+      width: 150px;
+      height: 40px;
+      margin: auto 0px;
     }
-    &_right{
-        @include flex;
-        justify-content: end;
 
-        *{
-            height: fit-content;
-            margin: auto 10px;
-        }
-        img{
-            // width: 100px;
-            height: fit-content;
-        }
+    form {
+      width: 50%;
+      height: fit-content;
+      margin: auto 0px;
+      display: flex;
+      border: 1px solid $border-color;
+      border-radius: 10px;
+      overflow: hidden;
+      input {
+        padding: 15px 10px;
+        border: none;
+        width: 80%;
+      }
+      div {
+        width: 20%;
+        background: $accent-color;
+        position: relative;
 
-        .user{
-            display: flex;
-
-            p{
-                height: fit-content;
-                margin: auto 00px;
-            }
+        img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
+      }
     }
+  }
+  &_right {
+    @include flex;
+    justify-content: end;
+
+    * {
+      height: fit-content;
+      margin: auto 10px;
+    }
+    img {
+      // width: 100px;
+      height: fit-content;
+    }
+
+    .user {
+      display: flex;
+
+      p {
+        height: fit-content;
+        margin: auto 00px;
+      }
+    }
+  }
 }

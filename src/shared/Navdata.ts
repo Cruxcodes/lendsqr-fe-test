@@ -12,7 +12,7 @@ interface NavInfo{
 export const Customers: NavInfo[] = [
     {
     
-    Link: '/user',
+    Link: 'user',
     icon:icons.User,
     iconInfo:'Users'
     },

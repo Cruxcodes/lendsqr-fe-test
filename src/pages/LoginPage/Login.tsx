@@ -1,8 +1,15 @@
 import React,{useState} from 'react'
+import { useNavigate } from 'react-router-dom';
 import image from '../../assets/img/sign-in-img.png'
 const Login: React.FC = () => {
   const [showPassword, setShowPassword] = useState<Boolean>(false);
   // const [password, setPassword] = useState<String>('');
+  const navigate = useNavigate();
+
+
+  const onSubmit = ()=>{
+    navigate("/dashboard");
+  }
   return (
     <div className="login-page">
       <div className="login-page__left">
@@ -15,7 +22,7 @@ const Login: React.FC = () => {
           <p>Enter details to login.</p>
         </div>
 
-        <form action="#!">
+        <form onSubmit={onSubmit}>
           <input type="email" placeholder="Email" />
           <div className="password">
             <input

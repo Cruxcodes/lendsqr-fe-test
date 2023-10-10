@@ -72,8 +72,8 @@ const UserTable = () => {
             </div>
         </div>
         
-        {currentPost.map((item)=>{
-          return <UserItem {...item}/>
+        {currentPost.map((item,index)=>{
+          return <UserItem {...item} key={index}/>
         })}
 
         <Pagination postsPerPage={postsPerPage} totalPosts={post.length} paginate={setCurrentPage} currentPage={currentPage}/>
