@@ -1,15 +1,16 @@
-import React,{useState} from 'react'
-import { useNavigate } from 'react-router-dom';
-import image from '../../assets/img/sign-in-img.png'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import image from "../../assets/img/sign-in-img.png";
 const Login: React.FC = () => {
   const [showPassword, setShowPassword] = useState<Boolean>(false);
-  // const [password, setPassword] = useState<String>('');
+  const [password, setPassword] = useState<String>("");
+  const [username, setUsername] = useState<string>("");
   const navigate = useNavigate();
 
-
-  const onSubmit = ()=>{
+  const onSubmit = () => {
+    // send the username and password service to any endpoint to verify and then if it's successful
     navigate("/dashboard");
-  }
+  };
   return (
     <div className="login-page">
       <div className="login-page__left">
@@ -23,11 +24,16 @@ const Login: React.FC = () => {
         </div>
 
         <form onSubmit={onSubmit}>
-          <input type="email" placeholder="Email" />
+          <input
+            type="email"
+            placeholder="Email"
+            onChange={(e: any) => setUsername(e.target.value)}
+          />
           <div className="password">
             <input
               type={showPassword ? "text" : "password"}
               placeholder="Password"
+              onChange={(e: any) => setPassword(e.target.value)}
             />
             <p className="show" onClick={() => setShowPassword(!showPassword)}>
               {showPassword ? "HIDE" : "SHOW"}
@@ -41,6 +47,6 @@ const Login: React.FC = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Login
+export default Login;

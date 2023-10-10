@@ -17,9 +17,13 @@ import {
 function DashboardLayout() {
   return (
     <>
-      <SideNav />
+      <div className="dashboard" style={{ display: "flex" }}>
+        <SideNav />
+        <div className="container" style={{width: "100%",}}>
+          <Outlet />
+        </div>
+      </div>
       <Topnav />
-      <Outlet />
     </>
   );
 }
